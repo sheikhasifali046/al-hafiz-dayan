@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al Hafiz &amp; Dayan — Premium Bespoke Tailoring | Okara, Pakistan</title>
+<meta name="description" content="Al Hafiz & Dayan Suiting Fancy Club — premium bespoke tailoring in Okara, Punjab. Shalwar kameez, suiting, waistcoats, sherwanis and kurtas, stitched to your perfect fit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0d0b08; --coal:#14110d; --panel:#1a1611; --line:#2c2519;
+    --gold:#c9a24b; --gold-2:#e6c878; --gold-3:#8f6f2a;
+    --cream:#f4ead3; --muted:#b8ab8d; --white:#fffaf0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--black);color:var(--cream);font-family:'Jost',system-ui,-apple-system,'Segoe UI',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+  h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:600;line-height:1.15}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  .eyebrow{letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-size:.72rem;font-weight:500}
+  .gold{color:var(--gold-2)}
+  .divider{width:64px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin:18px 0}
+  .divider.center{margin:18px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+
+  /* ---------- header ---------- */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,11,8,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .mark{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold-2);font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;letter-spacing:.02em}
+  .brand .name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;letter-spacing:.04em;line-height:1.1}
+  .brand .name small{display:block;font-family:'Jost',sans-serif;font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-top:2px}
+  nav ul{display:flex;gap:34px;list-style:none}
+  nav a{font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);transition:color .25s}
+  nav a:hover{color:var(--gold-2)}
+  .nav-cta{border:1px solid var(--gold);color:var(--gold-2);padding:9px 20px;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;transition:.25s}
+  .nav-cta:hover{background:var(--gold);color:#14110d}
+  .burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+  .burger span{display:block;width:24px;height:2px;background:var(--gold-2);margin:5px 0}
+
+  /* ---------- hero ---------- */
+  .hero{padding:150px 0 90px;background:radial-gradient(1000px 520px at 85% -10%,rgba(201,162,75,.16),transparent 60%),radial-gradient(700px 400px at -10% 110%,rgba(201,162,75,.10),transparent 60%)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+  .hero h1{font-size:clamp(2.6rem,5.2vw,4.4rem);margin:20px 0 8px}
+  .hero h1 em{color:var(--gold-2);font-style:italic}
+  .hero .urdu{font-size:1.25rem;color:var(--muted);margin:14px 0 6px}
+  .hero p.lead{color:var(--muted);font-size:1.08rem;max-width:520px}
+  .hero-btns{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 30px;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;transition:.25s}
+  .btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#14110d}
+  .btn-gold:hover{filter:brightness(1.1)}
+  .btn-ghost{border:1px solid var(--gold);color:var(--gold-2)}
+  .btn-ghost:hover{background:rgba(201,162,75,.12)}
+  .hero-stats{display:flex;gap:38px;margin-top:44px;flex-wrap:wrap}
+  .hero-stats b{display:block;font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--gold-2);font-weight:600}
+  .hero-stats span{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  .hero-photo{position:relative}
+  .hero-photo img{width:100%;height:640px;object-fit:cover;object-position:center 20%;border:1px solid var(--line)}
+  .hero-photo::after{content:"";position:absolute;inset:0;border:1px solid rgba(201,162,75,.35);transform:translate(16px,16px);pointer-events:none}
+  .hero-badge{position:absolute;left:-22px;bottom:34px;background:var(--panel);border:1px solid var(--gold);padding:14px 20px;z-index:2}
+  .hero-badge b{font-family:'Playfair Display',serif;color:var(--gold-2);font-size:1.05rem}
+  .hero-badge span{display:block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+  /* ---------- marquee ---------- */
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:16px 0;background:var(--coal)}
+  .marquee-track{display:flex;gap:0;white-space:nowrap;animation:scroll 26s linear infinite;width:max-content}
+  .marquee-track span{font-family:'Playfair Display',serif;font-size:1.15rem;letter-spacing:.14em;color:var(--gold);padding:0 26px}
+  .marquee-track i{color:var(--gold-3);font-style:normal}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* ---------- sections ---------- */
+  section{padding:96px 0}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 56px}
+  .sec-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-top:14px}
+  .sec-head p{color:var(--muted);margin-top:12px}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .about-grid img{width:100%;height:480px;object-fit:cover;border:1px solid var(--line)}
+  .about-grid h2{font-size:clamp(1.9rem,3vw,2.6rem);margin:14px 0 18px}
+  .about-grid p{color:var(--muted);margin-bottom:14px}
+  .about-grid p b{color:var(--cream);font-weight:500}
+  .quote{font-family:'Playfair Display',serif;font-style:italic;font-size:1.35rem;color:var(--gold-2);border-left:2px solid var(--gold);padding-left:18px;margin:26px 0}
+
+  /* services */
+  .services{background:var(--coal);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:var(--panel);border:1px solid var(--line);padding:34px 30px;transition:.3s}
+  .card:hover{border-color:var(--gold);transform:translateY(-4px)}
+  .card .num{font-family:'Playfair Display',serif;color:var(--gold-3);font-size:.95rem;letter-spacing:.2em}
+  .card h3{font-size:1.45rem;margin:14px 0 10px}
+  .card p{color:var(--muted);font-size:.97rem}
+  .card .tag{display:inline-block;margin-top:18px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-2);border-bottom:1px solid var(--gold-3);padding-bottom:3px}
+  .price-note{text-align:center;color:var(--muted);margin-top:36px;font-size:.95rem}
+  .price-note b{color:var(--gold-2);font-weight:500}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .g-item{position:relative;overflow:hidden;border:1px solid var(--line)}
+  .g-item img{width:100%;height:420px;object-fit:cover;transition:transform .6s}
+  .g-item:hover img{transform:scale(1.05)}
+  .g-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 14px;background:linear-gradient(transparent,rgba(13,11,8,.92));font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white)}
+  .g-item figcaption small{display:block;font-family:'Jost',sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-2);margin-top:2px}
+
+  /* process */
+  .process{background:var(--coal);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:step}
+  .step{border-top:2px solid var(--gold);padding-top:22px}
+  .step b{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--gold-2)}
+  .step h3{font-size:1.25rem;margin:10px 0 8px}
+  .step p{color:var(--muted);font-size:.95rem}
+
+  /* why */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;text-align:center}
+  .why{padding:10px 8px}
+  .why .ic{font-size:2rem;color:var(--gold-2)}
+  .why h3{font-size:1.2rem;margin:14px 0 8px}
+  .why p{color:var(--muted);font-size:.94rem}
+
+  /* visit */
+  .visit{background:linear-gradient(135deg,#171208,#0d0b08);border-top:1px solid var(--line);text-align:center}
+  .visit h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-top:14px}
+  .visit p{color:var(--muted);max-width:560px;margin:14px auto 0}
+  .visit .addr{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--gold-2);margin-top:22px}
+  .visit .btns{margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:var(--muted);font-size:.88rem}
+  footer .fbrand{font-family:'Playfair Display',serif;color:var(--cream);font-size:1.15rem;margin-bottom:6px}
+  footer .fbrand span{color:var(--gold-2)}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:900px){
+    .hero-grid,.about-grid{grid-template-columns:1fr;gap:40px}
+    .hero{padding-top:120px}
+    .hero-photo img{height:460px}
+    .cards{grid-template-columns:1fr 1fr}
+    .gallery{grid-template-columns:1fr 1fr}
+    .steps,.why-grid{grid-template-columns:1fr 1fr}
+    nav ul,.nav-cta{display:none}
+    .burger{display:block}
+    nav.open ul{display:flex;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:var(--coal);padding:20px 22px;gap:18px;border-bottom:1px solid var(--line)}
+    nav.open .nav-cta{display:inline-block;margin:0 22px 18px}
+  }
+  @media(max-width:560px){
+    .cards,.gallery,.steps,.why-grid{grid-template-columns:1fr}
+    .hero-photo img{height:380px}
+    section{padding:70px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="mark">A&amp;D</span>
+      <span class="name">Al Hafiz &amp; Dayan<small>Suiting Fancy Club</small></span>
+    </a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Our Work</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+      </ul>
+      <a class="nav-cta" href="#visit">Book a Fitting</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Suiting Fancy Club &bull; Okara, Punjab</span>
+        <h1>Al Hafiz<br>&amp; <em>Dayan</em></h1>
+        <p class="urdu">پریمیم بیسپوک ٹیلرنگ — اوکاڑہ</p>
+        <div class="divider"></div>
+        <p class="lead">Premium bespoke tailoring in the heart of Okara. Every stitch measured to you — shalwar kameez, suiting, waistcoats and sherwanis, crafted with care and finished to perfection.</p>
+        <div class="hero-btns">
+          <a class="btn btn-gold" href="#services">Explore Services</a>
+          <a class="btn btn-ghost" href="#work">See Our Work</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>100%</b><span>Bespoke Fit</span></div>
+          <div><b>Premium</b><span>Fabrics</span></div>
+          <div><b>On Time</b><span>Delivery</span></div>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="images/shop-signboard.jpg" alt="Al Hafiz & Dayan — Suiting Fancy Club shop board, Okara">
+        <div class="hero-badge"><b>Premium Bespoke Tailoring</b><span>Okara &bull; Punjab &bull; Pakistan</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Shalwar Kameez <i>✦</i></span><span>Suiting <i>✦</i></span><span>Waistcoat <i>✦</i></span><span>Sherwani <i>✦</i></span><span>Kurta <i>✦</i></span><span>Alterations <i>✦</i></span>
+      <span>Shalwar Kameez <i>✦</i></span><span>Suiting <i>✦</i></span><span>Waistcoat <i>✦</i></span><span>Sherwani <i>✦</i></span><span>Kurta <i>✦</i></span><span>Alterations <i>✦</i></span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <img src="images/shop-interior.jpg" alt="Inside the Al Hafiz & Dayan tailoring shop in Okara">
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">About the Shop</span>
+        <h2>Wear Your Best <span class="gold">Persona</span></h2>
+        <div class="divider"></div>
+        <p>Al Hafiz &amp; Dayan is a bespoke tailoring house in <b>Okara</b> — a place where good fabric, honest workmanship and a perfect fit come first. From everyday shalwar kameez to wedding sherwanis, every garment is cut and stitched by hand, to your measurements, your style and your occasion.</p>
+        <p>We believe a well-stitched suit does more than fit — it carries your personality. That is why every order is measured, cut and finished with the same care, whether it is a simple kurta or a full three-piece suit.</p>
+        <p class="quote">“Quality Craftsmanship, Timeless Style.”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">What We Stitch</span>
+        <h2>Services</h2>
+        <div class="divider center"></div>
+        <p>Complete bespoke stitching for men — from daily wear to wedding wear, all under one roof.</p>
+      </div>
+      <div class="cards">
+        <div class="card reveal"><span class="num">01</span><h3>Shalwar Kameez</h3><p>Classic and modern cuts in cotton, wash &amp; wear, lawn and boski — neat collars, clean stitching and a comfortable, true fit.</p><span class="tag">Daily &amp; Formal</span></div>
+        <div class="card reveal"><span class="num">02</span><h3>Suiting</h3><p>Two-piece and three-piece suits in premium suiting fabric — sharp shoulders, perfect trouser fall and a tailored silhouette.</p><span class="tag">2-Piece &amp; 3-Piece</span></div>
+        <div class="card reveal"><span class="num">03</span><h3>Waistcoat</h3><p>Plain and embroidered waistcoats that complete your shalwar kameez or suit — for functions, Eid and weddings.</p><span class="tag">Plain &amp; Fancy</span></div>
+        <div class="card reveal"><span class="num">04</span><h3>Sherwani</h3><p>Wedding and mehndi sherwanis with fine embroidery and rich fabrics — made to make the day yours.</p><span class="tag">Wedding Wear</span></div>
+        <div class="card reveal"><span class="num">05</span><h3>Kurta</h3><p>Short and long kurtas in soft fabrics — easy, elegant and ready for every season.</p><span class="tag">Casual &amp; Festive</span></div>
+        <div class="card reveal"><span class="num">06</span><h3>Alterations &amp; Fitting</h3><p>Adjustments, repairs and re-fitting of ready-made garments — sleeves, trousers, shoulders and more.</p><span class="tag">Quick Turnaround</span></div>
+      </div>
+      <p class="price-note reveal">Stitching charges depend on fabric and design — <b>visit the shop for a quote</b>. Bring your own fabric or choose from our range.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Our Work</span>
+        <h2>Crafted with Care</h2>
+        <div class="divider center"></div>
+        <p>A glimpse of the garments and the workshop behind them.</p>
+      </div>
+      <div class="gallery">
+        <figure class="g-item reveal"><img src="images/garment-shalwar-kameez.webp" alt="Cream shalwar kameez with gold embroidery"><figcaption>Shalwar Kameez<small>Embroidered Collar</small></figcaption></figure>
+        <figure class="g-item reveal"><img src="images/garment-suit.webp" alt="Navy blue three-piece suit"><figcaption>Three-Piece Suit<small>Navy &amp; Gold</small></figcaption></figure>
+        <figure class="g-item reveal"><img src="images/garment-sherwani.webp" alt="Cream and gold embroidered sherwani"><figcaption>Sherwani<small>Wedding Collection</small></figcaption></figure>
+        <figure class="g-item reveal"><img src="images/shop-interior.jpg" alt="Tailoring tools and fabric inside the shop"><figcaption>Inside the Shop<small>Okara</small></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">How It Works</span>
+        <h2>From Measurement to Masterpiece</h2>
+        <div class="divider center"></div>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><b>01</b><h3>Measurement</h3><p>Visit the shop — we take your full measurements and note your style, collar, cuffs and fit preferences.</p></div>
+        <div class="step reveal"><b>02</b><h3>Fabric &amp; Design</h3><p>Choose your fabric and design — plain, embroidered, fancy or formal — with honest guidance on what suits you.</p></div>
+        <div class="step reveal"><b>03</b><h3>Stitching</h3><p>Your garment is cut and stitched by hand with careful finishing — neat seams, clean lines, strong stitching.</p></div>
+        <div class="step reveal"><b>04</b><h3>Fitting &amp; Delivery</h3><p>Try it on, we adjust anything that needs it, and you take home a garment made only for you — on time.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Why Al Hafiz &amp; Dayan</span>
+        <h2>Tailoring You Can Trust</h2>
+        <div class="divider center"></div>
+      </div>
+      <div class="why-grid">
+        <div class="why reveal"><div class="ic">✂</div><h3>Perfect Fitting</h3><p>Measured to your body — not a standard size. If it needs adjusting, we fix it.</p></div>
+        <div class="why reveal"><div class="ic">◆</div><h3>Premium Fabrics</h3><p>Good quality suiting, cotton, wash &amp; wear and fancy fabrics, honestly priced.</p></div>
+        <div class="why reveal"><div class="ic">✦</div><h3>Quality Craftsmanship</h3><p>Clean stitching, neat finishing and attention to every small detail.</p></div>
+        <div class="why reveal"><div class="ic">◷</div><h3>On-Time Delivery</h3><p>Your order ready when promised — especially before Eid and wedding season.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="visit" id="visit">
+    <div class="wrap reveal">
+      <span class="eyebrow">Visit the Shop</span>
+      <h2>Come In for a Fitting</h2>
+      <p>Walk in with your fabric — or choose from ours. Measurements take a few minutes, and your order is stitched with the same care every time.</p>
+      <p class="addr">Al Hafiz &amp; Dayan — Suiting Fancy Club<br>Okara, Punjab, Pakistan</p>
+      <div class="btns">
+        <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Okara+Punjab+Pakistan" target="_blank" rel="noopener">Find Us on the Map</a>
+        <a class="btn btn-ghost" href="#services">View Services</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="fbrand">Al Hafiz <span>&amp;</span> Dayan</p>
+    <p>Suiting Fancy Club — Premium Bespoke Tailoring &bull; Okara, Punjab, Pakistan</p>
+    <p style="margin-top:8px">&copy; <span id="year">2026</span> Al Hafiz &amp; Dayan. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('burger').addEventListener('click', function(){
+    document.getElementById('nav').classList.toggle('open');
+  });
+  document.querySelectorAll('#nav a').forEach(function(a){
+    a.addEventListener('click', function(){ document.getElementById('nav').classList.remove('open'); });
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
